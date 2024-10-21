@@ -24,7 +24,9 @@ rename_files_and_directories() {
     done
     
     PROJECT_NAME_UPPERCASE=$(echo $PROJECT_NAME | tr '[:lower:]' '[:upper:]')
+    PROJECT_NAME_UPPERCASE_UNDERSCORE=$(echo $PROJECT_NAME_UPPERCASE | sed "s/\-/_/g")
     NEW_PROJECT_NAME_UPPERCASE=$(echo $new_project_name | tr '[:lower:]' '[:upper:]')
+    NEW_PROJECT_NAME_UPPERCASE_UNDERSCORE=$(echo $NEW_PROJECT_NAME_UPPERCASE | tr '[:lower:]' '[:upper:]')
     for item in $(find . -depth -name "*$PROJECT_NAME_UPPERCASE*"); do
         new_item=$(echo "$item" | sed "s/$PROJECT_NAME_UPPERCASE/$NEW_PROJECT_NAME_UPPERCASE/g")
         mv "$item" "$new_item"

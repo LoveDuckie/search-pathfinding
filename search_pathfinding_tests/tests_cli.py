@@ -3,7 +3,7 @@ from unittest.mock import patch
 
 from click.testing import CliRunner
 
-from python_tool_template.__main__ import cli
+from search_pathfinding.__main__ import cli
 
 
 class TestsCli(unittest.TestCase):

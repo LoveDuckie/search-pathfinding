@@ -1,19 +1,19 @@
 [tool.poetry]
-name = "python-tool-template"
+name = "search-pathfinding"
 version = "0.1.0"
 description = "A template repository for building tools in Python"
 readme = "README.md"
 authors = ["Luc Shelton <lucshelton@gmail.com>"]
-homepage = "https://github.com/loveduckie/python-tool-template"
-repository = "https://github.com/loveduckie/python-tool-template"
-documentation = "https://github.com/loveduckie/python-tool-template/-/wikis/home"
+homepage = "https://github.com/loveduckie/search-pathfinding"
+repository = "https://github.com/loveduckie/search-pathfinding"
+documentation = "https://github.com/loveduckie/search-pathfinding/-/wikis/home"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
 ]
 packages = [
-    { include = "python_tool_template" },
-    { include = "python_tool_template_tests" }
+    { include = "search_pathfinding" },
+    { include = "search_pathfinding_tests" }
 ]
 
 [tool.poetry.dependencies]
@@ -24,7 +24,7 @@ click = "^8.1.7"
 
 
 [tool.poetry.scripts]
-python-tool-template = 'python_tool_template.__main__:cli'
+search-pathfinding = 'search_pathfinding.__main__:cli'
 
 [tool.black]
 line-length = 100
@@ -57,6 +57,6 @@ coverage = "^7.6.0"
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.poetry_bumpversion.file."python_tool_template/__init__.py"]
+[tool.poetry_bumpversion.file."search-pathfinding/__init__.py"]
 search = '__version__ = "{current_version}"'
 replace = '__version__ = "{new_version}"'
